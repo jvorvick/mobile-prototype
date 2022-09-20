@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <div class="total">$500</div>
+  <button class="deposit" onclick="deposit()">deposit</button>
+  <button class="withdraw" onclick="withdraw()">withdraw</button>
+</body>
+
+<script>
+  
+  const total = document.querySelector(".total")
+  let total_num = parseInt(total.innerHTML.slice(1))
+
+  const deposit = () => {
+    amount = parseInt(prompt("Enter amount to deposit"))
+    total_num += amount
+    total.innerHTML = `$${total_num}`
+  }    
+
+  const withdraw = () => {
+    amount = parseInt(prompt("Enter amount to withdraw"))
+    total_num -= amount
+    total.innerHTML = `$${total_num}`
+  }
+
+</script>
+
+</html>
